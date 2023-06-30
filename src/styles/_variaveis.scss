@@ -1,0 +1,77 @@
+// $theme: "themeLight";
+
+@mixin center($alig, $just, $height, $width) {
+  align-items: $alig;
+  display: flex;
+  justify-content: $just;
+  height: $height;
+  width: $width;
+  transition: all 1s ease-in-out;
+}
+
+
+@mixin themeLight() {
+  color: black;
+  background-color: white;
+}
+
+@mixin themeDark() {
+  color: white;
+  background-color: black;
+}
+
+@mixin colors() {
+  background: linear-gradient(to right, #d000ff, #3f006c, #8400ff, #00aefffb, #f9009e);
+  background-size: 1400% 1400%;
+  animation: gradient 50s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@mixin colorsPers() {
+  background: linear-gradient(to right, #d000ff, #3f006c, #8400ff, #00aefffb, #f9009e);
+  background-size: 1400% 1400%;
+  // animation: gradient 50s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@mixin cor() {
+  background: linear-gradient(to right, #d000ff, #3f006c, #8400ff, #00aefffb, #f9009e);
+  background-size: 1400% 1400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: cor 60s ease infinite;
+}
+
+@keyframes cor {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

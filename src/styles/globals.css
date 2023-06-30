@@ -17,6 +17,8 @@
 } */
 
 html, body {
+  width: 100vw;
   background-color: #383446;
   color: white;
+  overflow-x: hidden;
 }

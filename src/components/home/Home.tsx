@@ -1,26 +1,3 @@
-// import { Inter } from 'next/font/google'
-// import Head from 'next/head'
-// import Link from 'next/link'
-
-// const inter = Inter({ subsets: ['latin'] })
-
-// export default function Home() {
-//   return (
-//     <>
-//       <Head>
-//         <title>Home | Alex</title>
-//       </Head>
-    
-//       <main
-//         className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-//       >
-//         <h1>Hello Word in Next.js</h1>
-//         <Link href="/projetos">Projetos</Link>
-//       </main>
-//     </>
-//   )
-// }
-
 import Head from 'next/head';
 import Link from 'next/link';
 import { useEffect, useRef } from 'react';
@@ -33,7 +10,6 @@ import styles from './Home.module.scss';
 
 const Home = () => {
   const el = useRef(null);
-  // const typed = useRef(null);
 
   useEffect(() => {
     const options = {
@@ -51,8 +27,6 @@ const Home = () => {
   }, []);
 
   return (
-
-    
     <div className={ styles.homeMain }>
     <Head>
       <title>Home | Alex</title>
@@ -64,9 +38,11 @@ const Home = () => {
           <div className={ styles.textInital }>
             <span className={ styles.topLine }>Olá</span>
             <h1>Eu sou Alex <br/> </h1>
-            <div className={ styles.div01 } />
-            <div className={ styles.div02 } />
-            <div className={ styles.div03 } />
+            {/* <section className={ styles.staks }>
+              <div className={ styles.div01 } />
+              <div className={ styles.div02 } />
+              <div className={ styles.div03 } />
+            </section> */}
             
           </div>
           <span className={ styles.multiText } style={{ whiteSpace: 'pre' }} ref={el}>.</span>
@@ -76,13 +52,16 @@ const Home = () => {
 
         </section>
 
-        <div className={ styles.btns }>
+        <section className={ styles.staks }>
+          <div className={ styles.div01 } />
+          <div className={ styles.div02 } />
+          <div className={ styles.div03 } />
+        </section>
 
+        <section className={ styles.btns }>
           <button>download CV</button>
           <Link href="/projetos"><button>hice me</button></Link>
-          
-
-        </div>
+        </section>
       </div>
 
     </div>

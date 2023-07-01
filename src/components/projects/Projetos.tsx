@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 
-export default function projetos() {
+export default function Projetos() {
   return (
     <>
       <Head>

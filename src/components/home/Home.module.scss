@@ -1,24 +1,33 @@
 @import '../../styles/variaveis';
 
 .homeMain {
-  @include center(center, center, calc(100vh - 80px), 100vw);
+  @include center(center, center, 100vh, 100vw);
   background-color: var(--fundoDark);
   color: var(--colorLight);
   overflow: hidden;
-  gap: 10em;
+  border: 5px solid salmon;
+  // gap: 10em;
+  min-height: 700px;
 
   .backgrounds {
+    @include center(center, center, 96vh, 100vw);
+    margin-top: 10vh;
     flex-direction: column;
+    border: 5px solid rgb(0, 252, 46);
     z-index: 0;
+    gap: 1em;
+    min-height: 700px;
   }
 
   .cols {
-    @include center(center, center, 100, 100vw);
-    flex-direction: column;
-    width: 50vw;
+    @include center(center, center, 70%, 100vw);
+    // flex-direction: column;
+    width: 80vw;
     height: auto;
     // padding: 0 150px;
     display: block;
+    border: 5px solid rgb(252, 0, 235);
+    // max-height: 700px;
 
     .topLine {
       display: block;
@@ -34,7 +43,7 @@
       content: '';
       height: 4px;
       width: 45px;
-      bottom: 10px;
+      bottom: 9px;
       background-color: var(--colorFont2);
     }
   
@@ -58,7 +67,7 @@
     .multiText {
       color: var(--colorFont);
       text-transform: capitalize;
-      font-size: 5em;
+      font-size: calc(100% - -50px);
       font-weight: 900;
     }
   
@@ -72,10 +81,12 @@
   
   }
   .btns {
-    display: flex;
+    @include center(center, center, 20%, 80vw);
     // width: 100%;
+    // max-height: 700px;
     // position: relative;
     // left: 150px;
+    border: 5px solid rgb(242, 255, 0);
     gap: 1em;
 
     button {
@@ -178,7 +189,7 @@
       // margin-top: 300px;
       width: 100vw;
 
-      margin-left: 10%;
+      // margin-left: 10%;
 
       .cols {
         .topLine {
@@ -202,7 +213,6 @@
       .btns {
         flex-direction: column;
         align-items: center;
-        margin-left: -5%;
         
         button {
           font-size: 18px;
@@ -313,7 +323,7 @@
 
 @media (max-width: 460px) {
   .homeMain {
-    padding: -5px 20px;
+    padding: 0 20px;
     // gap: 3em;
 
     .backgrounds {
@@ -321,13 +331,13 @@
       height: 100%;
       display: flex;
       gap: 150px;
-      margin-top: 30%;
-      margin-left: 2.5%;
+      // margin-top: 30%;
+      // margin-left: 2.5%;
 
       .cols {
         .topLine {
           font-size: 1.2em;
-          position: relative;
+          // position: relative;
         }
         
         h1 {
@@ -341,6 +351,10 @@
         p {
           font-size: 1em;
         }
+      }
+
+      .staks {
+        border: 5px solid rgb(242, 255, 0);
       }
 
       .div01::before {
@@ -402,14 +416,10 @@
       }
       
       .btns {
-        margin-top: 15%;
-        // gap: 2em;
-        margin-left: -5%;
-        
+        // margin-top: 15%;
         button {
           font-size: 18px;
           padding: 8px;
-          margin-bottom: 10px;
         }
       }
     }

@@ -40,7 +40,8 @@ const Home = () => {
           </div>
           <span className={ styles.multiText } style={{ whiteSpace: 'pre' }} ref={el}>.</span>
 
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit!</p>
+          <p>Estou buscando conhecimento e oportunidades para crescer profissionalmente.</p>
+          <p>Sempre comprometido a aprender e aberto superar novos desafios que impulsionem meu desenvolvimento no desenvolvimento web.</p>
 
 
         </section>
@@ -55,19 +56,9 @@ const Home = () => {
           <Link href="/cvfront.pdf" locale={false} target='_blank'>
               <button>Download CV</button>
           </Link>
-          {/* <a href={buildWhatsAppLink()} target="_blank" rel="noopener noreferrer">Enviar mensagem pelo WhatsApp</a> */}
-
           <Link href={buildWhatsAppLink()} target="_blank" rel="noopener noreferrer"><button>hice me</button></Link>
         </section>
       </div>
-
-      {/* <div className={ styles.teste1 }>
-        <h1>teste</h1>
-        <div className={ styles.teste2 }>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        <br/>
-        Iusto delectus quam modi. Maiores maxime voluptates ut doloribus nulla eligendi sapiente corporis debitis quis, ex dicta in! Voluptatibus nemo eaque non?</div>
-      </div> */}
-
     </div>
   )
 }

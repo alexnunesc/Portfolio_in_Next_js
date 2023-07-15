@@ -20,7 +20,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 
 html, body {
@@ -28,4 +27,5 @@ html, body {
   background-color: #383446;
   color: white;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }

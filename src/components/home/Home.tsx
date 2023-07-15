@@ -27,7 +27,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className={ styles.homeMain }>
+    <div id='inicio' className={ styles.homeMain }>
     <Head>
       <title>Home | Alex</title>
     </Head>
@@ -38,11 +38,6 @@ const Home = () => {
           <div className={ styles.textInital }>
             <span className={ styles.topLine }>Olá</span>
             <h1>Eu sou Alex <br/> </h1>
-            {/* <section className={ styles.staks }>
-              <div className={ styles.div01 } />
-              <div className={ styles.div02 } />
-              <div className={ styles.div03 } />
-            </section> */}
             
           </div>
           <span className={ styles.multiText } style={{ whiteSpace: 'pre' }} ref={el}>.</span>
@@ -63,6 +58,13 @@ const Home = () => {
           <Link href="/projetos"><button>hice me</button></Link>
         </section>
       </div>
+
+      {/* <div className={ styles.teste1 }>
+        <h1>teste</h1>
+        <div className={ styles.teste2 }>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        <br/>
+        Iusto delectus quam modi. Maiores maxime voluptates ut doloribus nulla eligendi sapiente corporis debitis quis, ex dicta in! Voluptatibus nemo eaque non?</div>
+      </div> */}
 
     </div>
   )

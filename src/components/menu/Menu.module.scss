@@ -1,59 +1,16 @@
 // $theme: "themeLight";
 @import '../../styles/variaveis';
 .headerMain {
-  background-color: var(--fundoDark);
+  background-color: var(--fundoDark2);
   position: fixed;
-  z-index: 9;
-  // .headerNav {
-  //   @include center(center, center, 10vh, 50vw);
-  //   gap: 1em;
-
-  //   ul {
-  //     @include center(center, center, 10vh, 50vw);
-
-  //     // @include #{$theme}();
-  //     gap: 1em;
-  //     list-style: none;
-  
-  //     li {
-  //       color: var(--colorFont);
-  //       hr {
-  //         width: 0;
-  //         height: 0.3em;
-  //         border-radius: 1em;
-  //         @include colorsPers();
-  //         border: none;
-  //         position: absolute;
-  //         animation: 0.5s ease forwards;
-  //       }
-  //       cursor: pointer;
-  //       position: relative;
-  //     }
-  
-  //     li:hover {
-  //       hr{
-  //         animation-name: grow;
-  //       }
-  //     }
-
-  //     @keyframes grow {
-  //       from {
-  //         width: 0;
-  //       }
-  //       to {
-  //         width: 50%;
-  //       }
-  //     }
-  
-  //   }
-  // }
+  z-index: 999;
 
   .iconsHeader {
     @include center(center, center, 100%, 100%);
     gap: 1em;
     button {
       // @include center(center, center, 30%, 10%);
-      background-color: var(--fundoDark);
+      background-color: var(--fundoDark2);
       border: none;
       color: rgb(255, 0, 128);
       // margin-bottom: 2vh;

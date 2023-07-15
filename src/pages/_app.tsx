@@ -7,10 +7,10 @@ import type { AppProps } from 'next/app'
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider>
-      {/* <Header /> */}
-      <Example />
-      <Component {...pageProps} />
-      <Projetos />
+        <Example />
+        <Component {...pageProps} />
+        <Projetos />
+        {/* <Footer /> */}
     </ThemeProvider>
   )
 }

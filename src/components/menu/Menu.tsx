@@ -1,6 +1,6 @@
 import { Disclosure } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 
 //==================================================
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -14,19 +14,20 @@ import styles from './Menu.module.scss';
 //==================================================
 
 
-const navigation = [
-  { name: 'Home', href: '#', current: true },
-  { name: 'Projetos', href: '#', current: false },
-  { name: 'Sobre', href: '#', current: false },
-]
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ')
-}
 
 export default function Example() {
-
+  
   const { theme, toggleTheme } = useContext(ThemeContext);
+  const [currente, setCurrente] = useState(true);
+
+  const navigation = [
+    { name: 'Home', href: '#', current: currente },
+    { name: 'Projetos', href: '#Projetos', current: currente },
+  ]
+  
+  function classNames(...classes: string[]) {
+    return classes.filter(Boolean).join(' ')
+  }
 
   return (
     <nav className={`${styles.headerMain} w-full shadow-md border-b-2 border-purple-600`}>
@@ -58,9 +59,10 @@ export default function Example() {
                           key={item.name}
                           href={item.href}
                           className={classNames(
-                            item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                            item.current ? 'bg-gray-900 text-white' : 'text-gray-800 hover:bg-gray-700 hover:text-white',
                             'rounded-md px-3 py-2 text-sm font-medium'
                           )}
+                          // onClick={() => currente ?? setCurrente(!currente)}
                           aria-current={item.current ? 'page' : undefined}
                         >
                           {item.name}
@@ -83,6 +85,7 @@ export default function Example() {
                     </button>
                   </section>
                 </div>
+
               </div>
             </div>
             

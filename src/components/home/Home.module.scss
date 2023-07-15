@@ -1,20 +1,26 @@
 @import '../../styles/variaveis';
 
+$alturaMinima: 600px; // Defina a altura mínima desejada
+
+@function calcularAlturaMinima() {
+  @return $alturaMinima + 100px; // Adicione uma margem de 100px à altura mínima
+}
+
 .homeMain {
   @include center(center, center, 100vh, 100vw);
   background-color: var(--fundoDark);
   color: var(--colorLight);
   overflow: hidden;
-  border: 5px solid salmon;
-  // gap: 10em;
-  min-height: 700px;
+  // border: 5px solid salmon;
+  min-height: 900px;
+  z-index: -1;
+  min-height: 7;
 
   .backgrounds {
     @include center(center, center, 96vh, 100vw);
     margin-top: 10vh;
     flex-direction: column;
-    border: 5px solid rgb(0, 252, 46);
-    z-index: 0;
+    // border: 5px solid rgb(0, 252, 46);
     gap: 1em;
     min-height: 700px;
   }
@@ -26,8 +32,9 @@
     height: auto;
     // padding: 0 150px;
     display: block;
-    border: 5px solid rgb(252, 0, 235);
+    // border: 5px solid rgb(252, 0, 235);
     // max-height: 700px;
+    z-index: 999;
 
     .topLine {
       display: block;
@@ -86,7 +93,7 @@
     // max-height: 700px;
     // position: relative;
     // left: 150px;
-    border: 5px solid rgb(242, 255, 0);
+    // border: 5px solid rgb(242, 255, 0);
     gap: 1em;
 
     button {
@@ -110,9 +117,28 @@
       color: black;
     }
   }
+
+  .teste1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 37, 37);
+    gap: 1em;
+
+    .teste2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgb(0, 37, 37);
+      // border: 3px solid rgb(0, 170, 31);
+      width: 500px;
+      padding: 1rem;
+    }
+  }
 }
 
-.homeMain::before {
+.div01::before {
   position: absolute;
   content: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg');
   height: 200px;
@@ -120,12 +146,16 @@
   // border-radius: 50%;
   left: -32px;
   top: 55%;
+  z-index: 1;
   // background: linear-gradient(45deg, var(--colorFont2), var(--color-pink));
   animation: spin infinite 90s linear;
-  // animation: objectOne 6s, linear infinite;s
+  // animation: objectOne 6s, linear infinite;
+  @media screen and (max-height: calcularAlturaMinima()) {
+    opacity: 0;
+  }
 }
 
-.homeMain::after {
+.div01::after {
   position: absolute;
   content: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg');
   height: 90px;
@@ -133,17 +163,22 @@
   left: 35%;
   top: 12%;
   animation: objectTwo 6s, linear infinite;
+  @media screen and (max-height: calcularAlturaMinima()) {
+    opacity: 0;
+  }
 }
 
-.cols::before {
+.div02::before {
   position: absolute;
   content: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg');
   height: 90px;
   width: 90px;
-  // border-radius: 50%;
   left: 65%;
   top: 22%;
   animation: spin1 infinite 30s linear, ease-in-out;
+  @media screen and (max-height: calcularAlturaMinima()) {
+    opacity: 0;
+  }
 }
 
 @keyframes objectTwo {

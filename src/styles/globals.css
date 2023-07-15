@@ -16,7 +16,16 @@
   }
 } */
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html, body {
+  width: 100vw;
   background-color: #383446;
   color: white;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }

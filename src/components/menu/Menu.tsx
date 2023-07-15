@@ -78,14 +78,14 @@ export default function Example() {
                 <div className="flex flex-shrink-0 items-center">
                   <section className={styles.iconsHeader}>
                     <span>ANC</span>
-                    <Link href='https://github.com/alexnunesc' target="_blank" rel="noopener noreferrer" >
-                      <GitHubIcon className={ styles.icons } />
+                    <Link className={ styles.icons } href='https://github.com/alexnunesc' target="_blank" rel="noopener noreferrer" >
+                      <GitHubIcon />
                     </Link>
-                    <Link href='https://www.linkedin.com/in/alexnunesc/' target="_blank" rel="noopener noreferrer" >
-                      <LinkedInIcon className={ styles.icons } />
+                    <Link className={ styles.icons } href='https://www.linkedin.com/in/alexnunesc/' target="_blank" rel="noopener noreferrer" >
+                      <LinkedInIcon />
                     </Link>
-                    <Link href={buildWhatsAppLink()} target="_blank" rel="noopener noreferrer">
-                      <WhatsAppIcon className={ styles.icons } />
+                    <Link className={ styles.icons } href={buildWhatsAppLink()} target="_blank" rel="noopener noreferrer">
+                      <WhatsAppIcon />
                     </Link>
                     <button onClick={toggleTheme}>
                       {theme === 'dark' ? <LightModeIcon /> : <ModeNightIcon /> }

@@ -11,13 +11,16 @@ export default function Projetos() {
       <Link href="#inicio" className={ styles.voltarTop }>Volta ao topo ^ </Link>
       <section className={ styles.sectionProjects }>
         <div className={ styles.imgs }>
-          <Image src="/1.png" alt="projeto um" width={800} height={0} />
-          <img src="https://skillicons.dev/icons?i=github,react,js,scss" />
+          <Link className={ styles.imgs } href="https://imusic-mauve.vercel.app/search" target="_blank" rel="noopener noreferrer">
+            <Image src="/1.png" alt="projeto um" width={800} height={0} />
+            <img src="https://skillicons.dev/icons?i=github,react,js,scss" />
+          </Link>
         </div>
         <div className={ styles.imgs }>
-          <Image src="/2.png" alt="projeto dois" width={800} height={0} />
-          {/* <h2>Tecnologis</h2> */}
-          <img src="https://skillicons.dev/icons?i=github,html,css,js" />
+          <Link className={ styles.imgs } href="https://formstrybe.netlify.app/" target="_blank" rel="noopener noreferrer">
+            <Image src="/2.png" alt="projeto dois" width={800} height={0} />
+            <img src="https://skillicons.dev/icons?i=github,html,css,js" />
+          </Link>
         </div>
       </section>
     <Footer />

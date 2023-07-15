@@ -1,0 +1,11 @@
+@import '../../styles/variaveis';
+
+.mainFooter {
+  @include center(center, center, 100%, 100vw);
+
+  // @include colorsPers();
+  background-color: var(--fundoDark2);
+  color: var(--colorFont2);
+  padding: 2rem;
+  margin-bottom: -2rem;
+}

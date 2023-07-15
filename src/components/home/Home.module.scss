@@ -27,14 +27,11 @@ $alturaMinima: 600px; // Defina a altura mínima desejada
   }
 
   .cols {
-    @include center(center, center, 70%, 100vw);
-    // flex-direction: column;
-    width: 80vw;
+    @include center(center, center, 70%, 50vw);
     height: auto;
-    // padding: 0 150px;
     display: block;
     // border: 5px solid rgb(252, 0, 235);
-    // max-height: 700px;
+    max-height: 700px;
     z-index: 999;
 
     .topLine {
@@ -56,20 +53,11 @@ $alturaMinima: 600px; // Defina a altura mínima desejada
     }
   
     h1 {
-      // @include center(center, center, calc(100% - 80px), 100%);
       display: block;
       font-size: 3em;
       font-weight: 900;
       color: var(--colorFont2);
-      // position: absolute;
-      // margin-left: 50px;
-  
-      // .multiText {
-      //   color: var(--colorFont);
-      //   text-transform: capitalize;
-      //   font-size: 1em;
-      // }
-  
+      // text-transform: capitalize;
     }
 
     .multiText {
@@ -119,24 +107,24 @@ $alturaMinima: 600px; // Defina a altura mínima desejada
     }
   }
 
-  .teste1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: rgb(0, 37, 37);
-    gap: 1em;
+  // .teste1 {
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+  //   justify-content: center;
+  //   color: rgb(0, 37, 37);
+  //   gap: 1em;
 
-    .teste2 {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: rgb(0, 37, 37);
-      // border: 3px solid rgb(0, 170, 31);
-      width: 500px;
-      padding: 1rem;
-    }
-  }
+  //   .teste2 {
+  //     display: flex;
+  //     align-items: center;
+  //     justify-content: center;
+  //     color: rgb(0, 37, 37);
+  //     // border: 3px solid rgb(0, 170, 31);
+  //     width: 500px;
+  //     padding: 1rem;
+  //   }
+  // }
 }
 
 .div01::before {
@@ -259,36 +247,11 @@ $alturaMinima: 600px; // Defina a altura mínima desejada
     }
   }
 
-  .homeMain::before {
-    // position: absolute;
-    // content: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg');
-    // height: 200px;
-    // width: 200px;
-    // left: -32px;
-    // top: 55%;
-    // animation: spin infinite 90s linear;
+  .div02::before {
     display: none;
   }
   
-  .homeMain::after {
-    // position: absolute;
-    // content: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg');
-    // height: 90px;
-    // width: 90px;
-    // left: 35%;
-    // top: 12%;
-    // animation: objectTwo 6s, linear infinite;
-    display: none;
-  }
-  
-  .cols::before {
-    // position: absolute;
-    // content: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg');
-    // height: 90px;
-    // width: 90px;
-    // left: 65%;
-    // top: 22%;
-    // animation: spin1 infinite 30s linear, ease-in-out;
+  .div01::after {
     display: none;
   }
 
@@ -297,7 +260,7 @@ $alturaMinima: 600px; // Defina a altura mínima desejada
     content: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg');
     width: 50px;
     left: 60%;
-    top: 40%;
+    top: 37%;
     animation: horizotal0 1s forwards;
     // display: none;
   }
@@ -307,7 +270,7 @@ $alturaMinima: 600px; // Defina a altura mínima desejada
     content: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg');
     width: 50px;
     left: 60%;
-    top: 40%;
+    top: 37%;
     animation: horizotal1 1s forwards;
   }
   
@@ -316,7 +279,7 @@ $alturaMinima: 600px; // Defina a altura mínima desejada
     content: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg');
     width: 50px;
     left: 60%;
-    top: 40%;
+    top: 37%;
     animation: horizotal2 1s forwards;
   }
 }
@@ -371,6 +334,7 @@ $alturaMinima: 600px; // Defina a altura mínima desejada
       // margin-left: 2.5%;
 
       .cols {
+        width: 80%;
         .topLine {
           font-size: 1.2em;
           // position: relative;
@@ -390,7 +354,10 @@ $alturaMinima: 600px; // Defina a altura mínima desejada
       }
 
       .staks {
-        border: 5px solid rgb(242, 255, 0);
+        // border: 5px solid rgb(242, 255, 0);
+        width: 100%;
+        max-width: 400px;
+        position: relative;
       }
 
       .div01::before {
@@ -411,7 +378,7 @@ $alturaMinima: 600px; // Defina a altura mínima desejada
       .div03::before {
         width: 50px;
         // left: 60%;
-        top: 51%;
+        top: 45%;
         animation: horizotal2 2s forwards;
       }
 
@@ -453,6 +420,7 @@ $alturaMinima: 600px; // Defina a altura mínima desejada
       
       .btns {
         // margin-top: 15%;
+        margin-bottom: 50px;
         button {
           font-size: 18px;
           padding: 8px;

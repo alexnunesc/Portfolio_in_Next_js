@@ -10,6 +10,7 @@ import ModeNightIcon from '@mui/icons-material/ModeNight';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 import { ThemeContext } from '@/hooks/ThemeProvider';
+import Link from 'next/link';
 import styles from './Menu.module.scss';
 //==================================================
 
@@ -17,7 +18,7 @@ import styles from './Menu.module.scss';
 
 export default function Example() {
   
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  const { theme, toggleTheme, buildWhatsAppLink } = useContext(ThemeContext) as any;
   const [currente, setCurrente] = useState(true);
 
   const navigation = [
@@ -77,9 +78,15 @@ export default function Example() {
                 <div className="flex flex-shrink-0 items-center">
                   <section className={styles.iconsHeader}>
                     <span>ANC</span>
-                    <GitHubIcon className={ styles.icons } />
-                    <LinkedInIcon className={ styles.icons } />
-                    <WhatsAppIcon className={ styles.icons } />
+                    <Link href='https://github.com/alexnunesc' target="_blank" rel="noopener noreferrer" >
+                      <GitHubIcon className={ styles.icons } />
+                    </Link>
+                    <Link href='https://www.linkedin.com/in/alexnunesc/' target="_blank" rel="noopener noreferrer" >
+                      <LinkedInIcon className={ styles.icons } />
+                    </Link>
+                    <Link href={buildWhatsAppLink()} target="_blank" rel="noopener noreferrer">
+                      <WhatsAppIcon className={ styles.icons } />
+                    </Link>
                     <button onClick={toggleTheme}>
                       {theme === 'dark' ? <LightModeIcon /> : <ModeNightIcon /> }
                     </button>

@@ -1,3 +1,4 @@
+import queryString from 'query-string';
 import { createContext, useState } from 'react';
 
 export const ThemeContext = createContext({
@@ -20,9 +21,21 @@ function ThemeProvider({ children }) {
     '--colorFont': theme === 'dark' ? 'white' : '#7f00ff',
     '--roxoMedio': theme === 'dark' ? '#8095f5' : '#7f00ff',
   };
+
+  function buildWhatsAppLink() {
+    const phoneNumber = +5562998528527;
+    const message = 'Olá, estou entrando em contato pelo seu site.';
+  
+    const query = queryString.stringify({
+      phone: phoneNumber,
+      text: message,
+    });
+  
+    return `https://api.whatsapp.com/send?${query}`;
+  };
   
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme, toggleTheme, buildWhatsAppLink }}>
       <div className="theme-provider" style={style}>
         {children}
       </div>

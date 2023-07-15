@@ -1,15 +1,13 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { useEffect, useRef } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 import Typed from 'typed.js';
+import { ThemeContext } from '../../hooks/ThemeProvider';
 import styles from './Home.module.scss';
-
-// imgs
-// import background from '../../img/background.png';
-
 
 const Home = () => {
   const el = useRef(null);
+  const { buildWhatsAppLink } = useContext(ThemeContext) as any;
 
   useEffect(() => {
     const options = {
@@ -54,8 +52,12 @@ const Home = () => {
         </section>
 
         <section className={ styles.btns }>
-          <button>download CV</button>
-          <Link href="/projetos"><button>hice me</button></Link>
+          <Link href="/cvfront.pdf" locale={false} target='_blank'>
+              <button>Download CV</button>
+          </Link>
+          {/* <a href={buildWhatsAppLink()} target="_blank" rel="noopener noreferrer">Enviar mensagem pelo WhatsApp</a> */}
+
+          <Link href={buildWhatsAppLink()} target="_blank" rel="noopener noreferrer"><button>hice me</button></Link>
         </section>
       </div>
 

@@ -56,7 +56,7 @@ const Home = () => {
           <Link href="/cvfront.pdf" locale={false} target='_blank'>
               <button>Download CV</button>
           </Link>
-          <Link href={buildWhatsAppLink()} target="_blank" rel="noopener noreferrer"><button>hice me</button></Link>
+          <Link href={buildWhatsAppLink()} target="_blank" rel="noopener noreferrer"><button>Dê-me um alô 🖖🏽</button></Link>
         </section>
       </div>
     </div>

@@ -18,9 +18,9 @@ const Home = () => {
       // backSpeed: 150,
       loop: false
     };
-  
+
     const typed = new Typed(el.current, options);
-  
+
     return () => typed.destroy();
   }, []);
 
@@ -41,7 +41,7 @@ const Home = () => {
           <span className={ styles.multiText } style={{ whiteSpace: 'pre' }} ref={el}>.</span>
 
           <p>Estou buscando conhecimento e oportunidades para crescer profissionalmente.</p>
-          <p>Sempre comprometido a aprender e aberto superar novos desafios que impulsionem meu desenvolvimento no desenvolvimento web.</p>
+          <p>Sempre comprometido a aprender e a superar novos desafios que impulsionem meu conhecimento no desenvolvimento web.</p>
 
 
         </section>

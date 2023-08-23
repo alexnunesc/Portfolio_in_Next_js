@@ -43,7 +43,6 @@ const Home = () => {
           <p>Estou buscando conhecimento e oportunidades para crescer profissionalmente.</p>
           <p>Sempre comprometido a aprender e a superar novos desafios que impulsionem meu conhecimento no desenvolvimento web.</p>
 
-
         </section>
 
         <section className={ styles.staks }>

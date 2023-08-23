@@ -232,6 +232,63 @@ $alturaMinima: 600px; // Defina a altura mínima desejada
         }
       }
       
+      .div01::before {
+        width: 50px;
+        left: 60%;
+        top: 62%;
+        animation: horizontal0 1s forwards;
+      }
+      
+      .div02::after {
+        width: 50px;
+        left: 60%;
+        top: 62%;
+        animation: horizontal1 1s forwards;
+      }
+      
+      .div03::before {
+        width: 50px;
+        // left: 60%;
+        top: 62%;
+        animation: horizontal2 1s forwards;
+      }
+
+      @keyframes horizontal0 {
+        0% {
+          transform: translateX(-50%);
+        }
+        70% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-520%);
+        }
+      }
+      
+      @keyframes horizontal1 {
+        0% {
+          transform: translateX(-50%);
+        }
+        70% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(-210%);
+        }
+      }
+      
+      @keyframes horizontal2 {
+        0% {
+          transform: translateX(-50%);
+        }
+        70% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+      
       .btns {
         align-items: center;
         gap: 2rem;
@@ -244,63 +301,8 @@ $alturaMinima: 600px; // Defina a altura mínima desejada
     }
   }
 
-  .div01::before {
-    width: 50px;
-    left: 60%;
-    top: 60%;
-    animation: horizotal0 1s forwards;
-  }
-  
-  .div02::after {
-    width: 50px;
-    left: 60%;
-    top: 60%;
-    animation: horizotal1 1s forwards;
-  }
-  
-  .div03::before {
-    width: 50px;
-    // left: 60%;
-    top: 60%;
-    animation: horizotal2 1s forwards;
-  }
 }
 
-@keyframes horizontal0 {
-  0% {
-    transform: translateX(-50%);
-  }
-  70% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-520%);
-  }
-}
-
-@keyframes horizontal1 {
-  0% {
-    transform: translateX(-50%);
-  }
-  70% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-210%);
-  }
-}
-
-@keyframes horizontal2 {
-  0% {
-    transform: translateX(-50%);
-  }
-  70% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
 
 @media (max-width: 690px) {
   .homeMain {
@@ -343,12 +345,12 @@ $alturaMinima: 600px; // Defina a altura mínima desejada
         top: 51%;
         animation: horizotal0 1s forwards;
       }
-      
+
       .div02::after {
         top: 51%;
         animation: horizotal1 1s forwards;
       }
-      
+
       .div03::before {
         top: 45%;
         animation: horizotal2 1s forwards;
@@ -365,7 +367,7 @@ $alturaMinima: 600px; // Defina a altura mínima desejada
           transform: translateX(-350%);
         }
       }
-      
+
       @keyframes horizotal1 {
         0% {
           transform: translateX(1%);
@@ -377,7 +379,7 @@ $alturaMinima: 600px; // Defina a altura mínima desejada
           transform: translateX(100%);
         }
       }
-      
+
       @keyframes horizotal2 {
         0% {
           transform: translateX(1%);
@@ -389,7 +391,7 @@ $alturaMinima: 600px; // Defina a altura mínima desejada
           transform: translateX(-250%);
         }
       }
-      
+
       .btns {
         // margin-top: 15%;
         margin-bottom: 50px;
